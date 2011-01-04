@@ -4,24 +4,42 @@ Finds the antipodal point of a lat/long location
 * http://en.wikipedia.org/wiki/Antipodes
 * http://en.wikipedia.org/wiki/Geographic_coordinate_system
 
-Some ascii art
+Install it
+==========
+
+    gem install antipodr
+
+Use it
+======
+
+    location = Antipodr::Location.new(:latitude  => 42.3678321,
+                                      :longitude => -71.0717353)
+    antipodal = location.antipodal
+    antipodal.latitude
+      => -42.3678321
+    antipodal.longitude
+      => 108.9282647
+    antipodal.to_s
+      => "-42.3678321,108.9282647"
+
+Some ASCII art
 ==============
 
-                                 o#'9MMHb':'-,o,
-                              .oH":HH$' "' ' -*R&o,
-                             dMMM*""'`'      .oM"HM?.
-                           ,MMM'          "HLbd< ?&H\
-                          .:MH ."\          ` MM  MM&b
-                         . "*H    -        &MMMMMMMMMH:
-                         .    dboo        MMMMMMMMMMMM.
-                         .   dMMMMMMb      *MMMMMMMMMP.
-                         .    MMMMMMMP        *MMMMMP .
-                              `#MMMMM           MM6P ,
-                          '    `MMMP"           HM*`,
-                           '    :MM             .- ,
-                            '.   `#?..  .       ..'
-                               -.   .         .-
-                                 ''-.oo,oo.-''
+               o#'9MMHb':'-,o,
+            .oH":HH$' "' ' -*R&o,
+           dMMM*""'`'      .oM"HM?.
+         ,MMM'          "HLbd< ?&H\
+        .:MH ."\          ` MM  MM&b
+       . "*H    -        &MMMMMMMMMH:
+       .    dboo        MMMMMMMMMMMM.
+       .   dMMMMMMb      *MMMMMMMMMP.
+       .    MMMMMMMP        *MMMMMP .
+            `#MMMMM           MM6P ,
+        '    `MMMP"           HM*`,
+         '    :MM             .- ,
+          '.   `#?..  .       ..'
+             -.   .         .-
+               ''-.oo,oo.-''
 
 License
 =======
